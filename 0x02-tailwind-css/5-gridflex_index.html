@@ -1,1 +1,132 @@
+I'm going to create the responsive layout combining both Grid and Flexbox. Here's the complete implementation:
+
+Step 1: Create 5-gridflex_index.html with the updated code
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid and Flexbox Layout</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="p-4">
+    <header class="bg-blue-500 text-white p-4">
+        <h1 class="text-3xl">Grid and Flexbox Layout</h1>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-4 min-h-screen">
+        <section class="lg:col-span-2 flex">
+            <div class="w-1/2 bg-red-200 p-4">Flexbox Item 1</div>
+            <div class="w-1/2 bg-red-400 p-4">Flexbox Item 2</div>
+        </section>
+        <aside class="bg-green-200 p-4">Sidebar</aside>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 mt-4">
+        <p>&copy; 2024 John Doe's Blog</p>
+    </footer>
+</body>
+</html>
+
+Step 2: Open the HTML file
+On Mac:
+open 5-gridflex_index.html
+
+On Windows:
+start 5-gridflex_index.html
+
+Expected Output:
+Desktop View (≥1024px - lg breakpoint):
+Header: Blue background with white text
+
+Main Layout: 3-column grid layout
+
+Section: Spans 2 columns (2/3 of width) containing two flex items side by side
+
+Flexbox Item 1: Red-200 background, occupies 1/2 width
+
+Flexbox Item 2: Red-400 background, occupies 1/2 width
+
+Sidebar: Green-200 background, occupies 1 column (1/3 of width)
+
+Footer: Dark gray background with copyright text
+
+Mobile View (<1024px):
+Main Layout: Single column layout
+
+Section stacks vertically (flex items become full width)
+
+Sidebar appears below the section
+
+Flexbox items stack vertically
+
+Key Features Implemented:
+Responsive Grid Layout:
+
+grid grid-cols-1 lg:grid-cols-3 - 1 column on mobile, 3 columns on large screens
+
+lg:col-span-2 - Section spans 2 columns on large screens
+
+gap-4 - Spacing between grid items
+
+mt-4 - Margin top
+
+min-h-screen - Minimum height of viewport
+
+Flexbox Layout:
+
+flex on section creates a flex container
+
+w-1/2 on divs makes each take 50% width
+
+Styling:
+
+bg-red-200 and bg-red-400 for flex items
+
+bg-green-200 for sidebar
+
+bg-blue-500 for header
+
+bg-gray-800 for footer
+
+p-4 for consistent padding
+
+Layout Visualization:
+Desktop (lg screens):
+
+text
+┌─────────────────────────────────┐
+│        Blue Header              │
+├───────────┬───────────┬─────────┤
+│ Red-200   │ Red-400   │ Green   │
+│ Flex Item │ Flex Item │ Sidebar │
+│ 1 (1/2)   │ 2 (1/2)   │ (1/3)   │
+└───────────┴───────────┴─────────┤
+│         Gray Footer             │
+└─────────────────────────────────┘
+Mobile:
+
+text
+┌─────────────────────────────────┐
+│        Blue Header              │
+├─────────────────────────────────┤
+│          Red-200                │
+│         Flex Item 1             │
+├─────────────────────────────────┤
+│          Red-400                │
+│         Flex Item 2             │
+├─────────────────────────────────┤
+│          Green Sidebar          │
+├─────────────────────────────────┤
+│         Gray Footer             │
+└─────────────────────────────────┘
+This layout demonstrates the powerful combination of CSS Grid for overall page structure and Flexbox for internal component layout, creating a fully responsive design that adapts beautifully across different screen sizes.
+
 
