@@ -1,1 +1,39 @@
+Objective
+
+Write a Sass file that assigns the text color #3D3D3D to the HTML tags body and p, using a Sass variable.
+Steps
+
+️In 0x03-sass_scss directory, create the file:
+touch 1-color_variable.scss
+
+Open the file and add this code:
+// Define the color variable
+$text-color: #3D3D3D;
+
+// Apply the color to body and p
+body {
+  color: $text-color;
+}
+
+p {
+  color: $text-color;
+}
+
+Run this command in your terminal:
+sass 1-color_variable.scss | tail -n +2
+
+Expected output:
+body {
+  color: #3D3D3D;
+}
+
+p {
+  color: #3D3D3D;
+}
+
+Explanation:
+
+$text-color is a Sass variable holding the hex color value.
+
+Using variables makes it easy to change colors across multiple selectors by updating a single value.
 
