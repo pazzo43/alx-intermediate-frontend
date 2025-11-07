@@ -1,1 +1,53 @@
+Objective
+
+Write a Sass file that assigns:
+
+Margin left and right = 10px to body tags
+
+Margin left and right = 15px to div tags
+
+You must use a mixin
+
+Steps
+
+️In 0x03-sass_scss directory, create the file:
+touch 8-mixin_margins.scss
+
+Open the file and add this Sass code:
+// Define a mixin for left and right margins
+@mixin set-margins($left, $right) {
+  margin-left: $left;
+  margin-right: $right;
+}
+
+// Use the mixin in body and div
+body {
+  @include set-margins(10px, 10px);
+}
+
+div {
+  @include set-margins(15px, 15px);
+}
+
+Run this command:
+sass 8-mixin_margins.scss | tail -n +2
+
+Expected output:
+body {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+div {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+Explanation:
+
+@mixin defines reusable style rules with parameters.
+
+@include applies that mixin to a selector.
+
+This approach avoids repeating code and makes your CSS more maintainable.
 
