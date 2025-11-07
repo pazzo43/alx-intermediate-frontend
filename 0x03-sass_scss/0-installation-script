@@ -1,1 +1,54 @@
+Steps to install and set up SASS
+Create the project directory
+
+In my alx-intermediate-frontend repository, let me run:
+mkdir 0x03-sass_scss
+cd 0x03-sass_scss
+
+(Optional) Install Node Version 20.16 using NVM
+
+If Node isn’t already installed, install NVM and Node 20.16:
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+exit
+
+Reopen your terminal, then run:
+nvm install 20.16
+nvm use 20.16
+
+Verify installation:
+node -v
+npm -v
+
+Install SASS
+
+Once Node is installed, run:
+npm install sass -v 3.7.4
+
+Verify that SASS is installed:
+npx sass --version
+
+Create your installation script file
+
+In the 0x03-sass_scss directory, create an empty file named:
+touch 0-installation-script
+
+Open the file and write the steps you followed.
+Example content for 0-installation-script 
+# Steps to install SASS
+
+1. Created the directory 0x03-sass_scss inside alx-intermediate-frontend repository.
+2. Installed NVM:
+   $ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+3. Exited the terminal and reopened it.
+4. Installed Node version 20.16:
+   $ nvm install 20.16
+   $ nvm use 20.16
+5. Verified Node and NPM installation:
+   $ node -v
+   $ npm -v
+6. Installed SASS version 3.7.4:
+   $ npm install sass -v 3.7.4
+7. Verified SASS installation:
+   $ npx sass --version
+
 
