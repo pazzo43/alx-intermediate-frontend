@@ -1,1 +1,27 @@
+here’s how to complete that “Hello world” debug message task step by step.
+Objective
 
+Create a Sass file that outputs a debug message:
+Hello world
+
+Steps
+
+In your project directory (0x03-sass_scss), create a file named:
+touch 0-debug_log.scss
+
+Open the file and add this Sass code:
+@debug 'Hello world';
+
+Run this command in your terminal:
+sass 0-debug_log.scss | head -n 0
+
+Expected output:
+0-debug_log.scss:2 DEBUG: Hello world
+
+Explanation:
+
+@debug is a Sass directive that prints messages to the standard error output (used for debugging).
+
+'Hello world' is the string being printed.
+
+The | head -n 0 part ensures no CSS output appears — only the debug message.
