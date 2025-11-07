@@ -1,1 +1,43 @@
+Objective
 
+Write a Sass file that assigns:
+
+No margin or padding to body tags
+
+Margin of 10px to all p tags inside body tags
+
+Use nested declarations
+
+Steps
+
+In 0x03-sass_scss directory, create the file:
+touch 3-nested_tag.scss
+
+Open the file and add this Sass code:
+body {
+  margin: 0px;
+  padding: 0px;
+
+  p {
+    margin: 10px;
+  }
+}
+
+Run this command in your terminal:
+sass 3-nested_tag.scss | tail -n +2
+
+Expected output:
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body p {
+  margin: 10px;
+}
+
+Explanation:
+
+The p selector is nested inside the body selector, meaning the compiled CSS targets p elements inside the body.
+
+Nesting helps keep related styles grouped and readable in Sass.
